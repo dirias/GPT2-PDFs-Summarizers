@@ -1,0 +1,555 @@
+ISSN: 2277 -3754   
+    ISO 9001:2008 Certified  
+International Journal of Engineering and Innovative Technology (IJEIT)  
+Volume 2, Issue 1, July 2012  
+ 189 
+Introduction to Artificial Neural Network  
+A.D.Dongare, R.R.Kharde, Amit D.Kachare   
+Abstract : - This paper presents an emergence of an Artificial 
+Neural Network (ANN) as a tool for analysis of different 
+parameters of a system. An Artificial Neural Network (ANN) is 
+an information -processing paradigm that is inspired by the way 
+biological nervous systems such as brain, process information. 
+ANN consists of multiple layers of simple processing elements 
+called as neurons. The neuron performs two functions, namel y, 
+collection of inputs & generation of an output. Use of ANN 
+provides overview of the theory, learning rules, and applications 
+of the most important neural network models, definitions and 
+style of Computation . The mathematical model of network 
+throws the light on the concept of inputs, weights, summing 
+function, activation function & outputs. Then ANN helps to 
+decide the type of learning for  adjustment of weights with 
+change in parameters. Finally the analysis of a system is 
+completed by ANN implementation  & ANN training & prediction 
+quality.  
+ 
+Keywords:  Biological Inspiration,  ANN Methodology, ANN 
+Implementation and Prediction.  
+ 
+I. INTRODUCTION  
+Many tasks involving intelligence or pattern recognition 
+are extremely difficult to automate, but appear to be  
+perfor med very easily by humans. For instance, human s 
+recognize various objects and make sense out of the large 
+amount of visual information in their surroundings, 
+apparently requiring very little effort. It stands to reason 
+that computing systems that attempt s imilar tasks will profit 
+enormou sly from understanding how human s perform these 
+tasks, and simulating these processes to the extent allowed 
+by physical limitations. This necessitates the study and 
+simulation of Neural Networks.  The neural network of an 
+human is part of its nervous system, containing a large 
+number of interconnected neurons (nerve cells). “Neural” is 
+an adjective for neuron, and “Network” denotes a graph like 
+structure. Artificial Neural Network refers to computing 
+systems whose central them e is borrowed from the analogy 
+of biological neural networks.  Artificial Neural Networks 
+are also referred to as “Neural Nets”, artificial neural 
+systems “parallel distributed processing systems” and 
+“connectionist systems”. For a computing system to be 
+called by these pretty names, it is necessary for the system 
+to have a labeled directed graph structure where nodes 
+perform some simple computations. From elementary graph 
+theory we recall that a “Directed Graph” consists of a set of  
+“Nodes”  (vertices) and  a set of “Connections” 
+(edges/links/arcs) connecting pairs of nodes. In a neural 
+network, each node performs some simple computations, 
+and each connection conveys a signal from one node to 
+another, labeled by a number called the “Connection 
+Strength” or “ Weight” indicating the extent to which a 
+signal is amplified or diminished by connection. This 
+system is the alternative for human expertise and knowledge. Artificial Neural Networks are modeled closely 
+following the brain and therefore a great deal of 
+terminology is borrowed from neuroscience.  
+ 
+II. LITERATURE REVIEW  
+A.O. Kurban investigated an artificial neural network are 
+non-linear mapping systems with a structure loosely based 
+on principles observed in the biological nervous systems. In 
+greatly simplified t erms from, a typical real neuron has a 
+branching dentritic tree that collects signals from many 
+other neurons in a limited area; a cell body that integrates 
+collected signals and generates a response signal (as well as 
+manages metabolic functions); and alo ng branching axon 
+that distributes the response through contacts with dentritic 
+trees of many other neurons. The response of each neuron is 
+a relatively simple non -linear function of its inputs and is 
+largely determined by the strengths of the connections from 
+its inputs. In spite of the relative simplicity of the individual 
+units, systems containing many neurons can generate 
+complex and intersecting behaviors. In general terms, a NN 
+consists of large number of simple processors linked by 
+weighted connectio ns. By analogy, the processing nodes 
+may be called “neurons”. Each node output depends only on 
+the information that is locally available at the node, either 
+stored internally or arriving via the weighted connections. 
+Each unit receives inputs from many oth er nodes and 
+transmits its output to other nodes. By itself, a single 
+processing element is not very powerful; it generates a 
+scalar output with a single numerical value, which is a 
+simple non -linear function of its inputs. The power of the 
+system emerges from the combination of many units in an 
+appropriate way. A network is utilized different function by 
+varying the connection topology and the values of the 
+connecting weights. Complex functions can be implemented 
+by connecting the units together with appro priate weights. It 
+has been shown that a sufficiently large network with an 
+appropriate structure and property chosen weights can 
+approximate with arbitrary accuracy any function satisfy ing 
+certain broad constraints. [1 ] This model is a drastically 
+simplif ied approximation of real nervous systems. The 
+intent is to capture the major characteristics important in the 
+information processing functions of real networks without 
+varying too much about the physical constraints imposed by 
+biology. Artificial NN are m ade up of simple, highly 
+interconnected processing units called neurons, each of 
+which performs two functions, namely, aggregation of its 
+inputs from other neurons or the external environment and 
+generation of an output from the aggregated inputs. 
+Through this simple structure, neural networks have been 
+shown to be able to approximate most continuous functions 
+to any degree of accuracy, by choice of an appropriate  
+ 
+      
+         ISSN: 2277 -3754   
+    ISO 9001:2008 Certified  
+International Journal of Engineering and Innovative Technology (IJEIT)  
+Volume 2, Issue 1, July 2012  
+ 190 
+number of neuron units (Kurban and Yildirim, 2003; 
+Yildirim and Uzmay, 2003) . [2] 
+ 
+III. BIOLOG ICAL INSPIRATION  
+Human brain is made up of a network of neurons that are 
+coupled with receptors and effectors. Receptors are called 
+“dendrites” and effectors are called “axons” .[3] Fig. 1 
+shows that the dendrites collects the signals from many 
+other neuron s in a limited area; a cell body  or soma that 
+integrates collected signals & generates a response signal & 
+along branching axon that distributes the response through 
+contacts with dendrite trees  of many other neurons. [4]  
+ 
+Fig. 1 Biological Neuron  
+IV. A NN METHODOLOGY  
+ANNs  are basically massive parallel computational 
+models that imitate the function of human brain. An ANN 
+consists of large number of simple processors linked by 
+weighted connections. By analogy, the processing nodes 
+may be called “neurons”.  Each node output depends only on 
+the information that is locally available at the node, either 
+stored internally or arriving via the weighted connections. 
+Each unit receives inputs from many other nodes transmits 
+its output to yet another nodes. By itself , a single processing 
+element is not very powerful; it generates a scalar output 
+with single numerical value, which is a simple non -linear 
+function of its inputs. The power of the system emerges from the combination of many units in an appropriate way. 
+[1] The ANN does not really solve the problem in a strictly 
+mathematical sense, but it demonstrates information 
+processing characteristics that give an approximate solution 
+to a given problem. The ANNs have been widely used in 
+complex non linear function mapp ing, image processing, 
+pattern recogni tion & classification & so on. Feed -forward 
+networks are common type of neural networks. A feed 
+forward network comprises an input layer, where the inputs 
+of the problem are received, hidden layers, where the 
+relations hip between the inputs & outputs are determined & 
+represented by synaptic weights, & an output layer which 
+emits the outputs of the problem. The neural feed forward 
+network is modeled with three basic elements:  a) A set of 
+synapses characterized by synapti c weights,  b) An adder or 
+linear combiner for summing the input signals.  c) An 
+activation function for limiting the amplitude of the output 
+of neuron to some finite value. The input of the activation 
+function can be increased by using a bias term. Here, we  
+have made use of a certain ANN architecture known as the 
+multi -layer -feed-forward neural network or Multi Layer 
+Perceptron (MLP) [5] . 
+ 
+Fig.2 Style of Neural Computation
+In above Fig.2 a n input is presented to the neural network 
+and a corresponding desire d or target response set at the 
+output (when this is the case the training is called 
+supervised). An error is composed from the difference 
+between the desired response and the system output. This 
+error information is fed back to the system and adjusts the 
+system parameters in a systematic fashion (the learning 
+rule). The process is repeated until the performance is 
+acceptable. It is clear from this description that the 
+performance hinges heavily on the data. If one does not 
+have data that cover a significan t portion of the operating 
+conditions or if they are noisy, then neural network 
+technology is probably not the right solution. On the other 
+hand, if there is plenty of data and the problem is poorly 
+understood to derive an approximate model, then neural 
+network technology is a good choice. This operating 
+procedure should be contrasted with the traditional 
+engineering design, made of exhaustive subsystem 
+specifications and intercommunication protocols. In artificial neural networks, the desig ner chooses the network 
+topology, the performance function, the learning rule, and 
+the criterion to stop the training phase, but the system 
+automatically adjusts the parameters. So, it is difficult to 
+bring a priori information into the design, and when the 
+system does no t work properly it is also hard to 
+incrementally refine the solution. But ANN -based solutions 
+are extremely efficient in terms of development time and 
+resources, and in many difficult problems artificial neural 
+networks provide performance that is difficul t to match with 
+other technologies. Denker 10 years ago said that "artificial 
+neural networks are the second best way to implement a 
+solution" motivated by the simplicity of their design and 
+because of their universality, only shadowed by the 
+traditional d esign obtained by studying the physics of the 
+problem. At present, artificial neural networks are emerging 
+as the technology of choice for many applications, such as 
+pattern recognition, prediction, system identification, and 
+control.[ 6]  
+ 
+      
+         ISSN: 2277 -3754   
+    ISO 9001:2008 Certified  
+International Journal of Engineering and Innovative Technology (IJEIT)  
+Volume 2, Issue 1, July 2012  
+ 191 
+Table 1. Terminolo gy of Neuron  
+Biological Terminology  ANN Terminology  
+ 
+Neuron  Node/Unit/Cell/Neurode  
+ 
+Synapse  Connection/Edge/Link  
+ 
+Synaptic Efficiency  Connection Strength/Weight  
+ 
+Firing Frequency  Node Output  
+ 
+A. Mathematical Model  
+When creating a functional model of t he biological 
+neuron, there are three basic components of importance. 
+First, the synapses of the neuron are modeled as weights. 
+The strength of the connection between an input and a 
+neuron is noted by the value of the weight. Negative weight 
+values reflect  inhibitory connections, while positive values 
+designate excitatory connections [Haykin]. The next two 
+components model the actual activity within the neuron cell. 
+An adder sums up all the inputs modified by their respective 
+weights. This activity is refer red to as linear combination. 
+Finally, an activation function controls the amplitude of the 
+output of the neuron. An acceptable range of output is 
+usually between 0 and 1, or -1 and 1.  Mathematically, this 
+process is described in the figure,  
+ 
+Fig. 3 Math ematical Model  
+From this model the interval activity of the neuron can be 
+shown to be,  
+                                          (1) 
+The output of the neuron, Yk, would therefore be the 
+outcome of some activation function on the value of Vk. [ 7] 
+B. Feed F orward Networks  
+This is a subclass of acrylic networks in which a 
+connection is allowed from a node in layer i only to nodes 
+in layer i+1 as shown in Fig.4 . These networks are 
+succinctly described by a sequence of numbers indicating 
+the number of nodes in each layer. For instance, the network shown in Fig. 4 is a 3 -2-3-2 feed forward network; 
+it contains three nodes in the input layer (layer 0), two 
+nodes in the first hidden layer (layer 1), three nodes in the 
+second hidden layer (layer 2), and two nodes in  the output 
+layer (layer 3).  These networks, generally with no more 
+than four such layers, are among the most common neural 
+nets in use, so much so that some users identify the phrase 
+“neural networks” to mean only feed forward networks. 
+Conceptually, node s in successively higher layers abstract 
+successively higher level features from preceding layers. In 
+the literature on neural networks, the term “feed forward” 
+has been used sometimes to refer to layered or acrylic 
+networks. [ 8]        
+ 
+Fig. 4 Feed Forwa rd Networks  
+C. Neural Learning  
+It is reasonable to conjecture that neurons in an animal’s 
+brain are “hard wired.” It is equally obvious that animals, 
+especially the higher order animals, learn as they grow. 
+How does this learning occur? What are possible 
+mathematical models of learning?  In this section, we 
+summarize some of the basic theories of biological learning 
+and their adaptations for artificial neural networks. In 
+artificial neural networks, learning refers to the method of 
+modifying the weights of c onnections between the nodes of 
+a specified network.  Learning is the process by which the 
+random -valued parameters (Weights and bias) of a neural 
+network are adapted through a continuous process of 
+simulation by the environment in which network is 
+embedded . Learning rate is defined as the rate at which 
+network gets adapted. Type of learning is determined by the 
+manner in which parameter change takes place. Learning 
+may be categorized as supervised learning, unsupervised  
+learning and r einforced learning.  In Supervised learning,  a 
+teacher is available to indicate whether a system is 
+performing correctly, or to indicate a desired response, or to 
+validate the acceptability of a system’s responses, or to 
+indicate the amount of error in system performance. This is  
+in contrast with unsupervised learning, where no teacher is 
+available and learning must rely on guidance obtained 
+heuristically by the system examining different sample data 
+or the environment. Learning is similar to training i.e. one 
+has to learn somethi ng which is analogous to one has to be 
+trained. A neural network has to be configured such that the 
+application of a set of inputs produces (either 'direct' or via 
+a relaxation process) the desired set of outputs. Various 
+methods to set the strengths of th e connections exist. One 
+way is to set the weights explicitly, using a priori  
+ 
+      
+         ISSN: 2277 -3754   
+    ISO 9001:2008 Certified  
+International Journal of Engineering and Innovative Technology (IJEIT)  
+Volume 2, Issue 1, July 2012  
+ 192 
+knowledge. Another way is to 'train' the neural network by 
+feeding it teaching patterns and letting it change its weights 
+according to some learning rule. We  can categorize the 
+learning situations in two distinct sorts. These are  
+1. Supervised Learning  
+Supervised learning  or Associative learning in which the 
+network is trained by providing it with input and matching 
+output patterns. These input -output pairs can be provided by 
+an external teacher, or by the system which contains the 
+neural network (self -supervised).  Example:  An 
+archaeologist discovers a human skeleton and has to 
+determine whether it belonged to man or woman. In doing 
+this, the archaeologist is guided by many past ex amples of 
+male and female skeletons. Examination of these past 
+examples (called the training set) allows the archaeologist 
+to learn about the distinctions between male and female 
+skeletons. This learning process is an example of supervised 
+learning, and th e result of learning process can be applied to 
+determine whether the newly discovered skeleton belongs to 
+man or woman.  
+ 
+Fig. 5 Supervised Learning  
+2 .Unsupervised Learning  
+Unsupervised learning  or Self -organization in which an 
+(output) unit is trained to  respond to clusters of pattern 
+within the input. In this paradigm the system is supposed to 
+discover statistically salient features of the input population. 
+Unlike the supervised learning paradigm, there is no a priori 
+set of categories into which the pat terns are to be classified; 
+rather the system must develop its own representation of the 
+input stimuli. Example:  In a different situation, the 
+archaeologist has to determine whether a set of skeleton 
+fragments belong to the same dinosaur species or need to  be 
+differentiated into different species. For this task, no 
+previous data may be available to clearly identify the 
+species for each skeleton fragment. The archaeologist has to 
+determine whether the skeletons (that can be reconstructed 
+from the fragments) are sufficiently similar to belong to the 
+same species, or if the differences between these skeletons 
+are large enough to warrant grouping them into different 
+species. This is an unsupervised learning process, which 
+involves estimating the magnitudes of di fferences between 
+the skeletons. One archaeologist may believe the skeletons 
+belong to different species, while another may disagree, and 
+there is no absolute criterion to determine who is correct.    
+ 3 .Reinforced Learning  
+Reinforcement Learning  is type of learning may be 
+considered as an intermediate form of the above two types 
+of learning. Here the learning machine does some action on 
+the environment and gets a feedback response from the 
+environment.  The learning system grades its action good 
+(rewarding ) or bad (punishable) based on the environmental 
+response and accordingly adjusts its parameters. Generally, 
+parameter adjustment is continued until an equilibrium state 
+occurs, following which there will be       no more changes 
+in its parameters. The sel f organizing neural learning may 
+be categorized under this type of learning. [ 7] 
+D. Back Propagation Network  
+The back propagation algorithm (Rumelhart and 
+McClelland, 1986) is used in  layered feed -forward ANNs. 
+This means that the artificial neurons are  organized in 
+layers,  and send their signals “forward”, and then the errors 
+are propagated backwards. The network receives inputs by 
+neurons in the input layer , and the output of the network is 
+given  by the neurons on an output layer . There may be one 
+or m ore intermediate hidden layers . The back propagation 
+algorithm uses supervised learning, which means that we 
+provide the  algorithm with examples of the inputs and 
+outputs we want the network to compute, and  then the error 
+(difference between actual and exp ected results) is 
+calculated. The idea of  the back propagation algorithm is to 
+reduce this error, until the ANN learns the training  data. 
+The training begins with random weights, and the goal is to 
+adjust them so that the  error will be minimal.  [9] Back 
+propagation network has gained importance due to the 
+shortcomings of other available networks. The network is a 
+multi layer network (multi layer perception) that contains at 
+least one hidden layer in addition to input and output layers. 
+Number of hidden laye rs & numbers of neurons in each 
+hidden layer is to be fixed based on application, the 
+complexity of the problem and the number of inputs and 
+outputs. Use of non -linear log -sigmoid transfer function 
+enables the network to simulate non -linearity in practical  
+systems. Due to this numerous advantages, back 
+propagation network is chosen for present work.  [3] 
+Implementation of back propagation model consists of two 
+phases. First phase is known as training while the second 
+phase is called Testing. Training, in bac k propagation is 
+based on gradient decent rule that tends to adjust weights 
+and reduce system error in the network. Input layer has 
+neurons equal in number to that of the inputs. Similarly, 
+output layer neurons are same in the number as number of 
+outputs. Number of hidden layer neurons is deciding by trial 
+and error method using the experimental data. [ 10] 
+E.ANN Development & Implementation  
+In this work, both ANN implementation & training is 
+developed, using the neural network toolbox of Mat Lab. 
+Different ANNs are build rather than using one large ANN 
+including all the output variables. This strategy allowed for 
+better adjustment of the ANN for each specific problem, 
+including the optimization of the architecture for each 
+output.   .   
+ 
+      
+         ISSN: 2277 -3754   
+    ISO 9001:2008 Certified  
+International Journal of Engineering and Innovative Technology (IJEIT)  
+Volume 2, Issue 1, July 2012  
+ 193 
+F. ANN Training & Predicti on quality  
+One of the most relevant aspects of a neural network is 
+its ability to generalize, that is, to predict cases that are not 
+included in the training set. One of the problems that occur 
+during neural network training is called over fitting. The 
+error on the training set is driven to a very small value, but 
+when new data is presented to the network, the error is 
+large. The network has memorized the training examples, 
+but it has not learned to generalize to new situations. One 
+method for improving net work generalization is to use a 
+network that is just large enough to provide an adequate fit. 
+The larger network you use the more complex functions the 
+network can create. There are two other methods for 
+improving generalization that are implemented in Mat  Lab 
+Neural Network Toolbox software: regularization & early 
+stopping.  The typical performance function used for 
+training feed forward neural networks is the mean sum o f 
+squares of the network errors,  
+             (2) 
+It is possible to improve generalizat ion, if you modify the 
+performance function by adding a term that consists of the 
+mean of the sum of the squares of the network weights & 
+biases,  
+msereg = λmse +(1 -λ)msw,                                       (3)    
+Where λ  is the performance ratio, &  
+                                              (4)  
+Using this performance function causes the network to have 
+smaller weights & biases, & this force t he network response 
+to be smoother & less likely to over fit.  Once the different 
+stages of the training process & the ANN structure had been 
+determined, & before the optimization procedure is 
+developed, it is important to estimate the ANN prediction 
+qualit ies. There is excellent agreement of predicted values 
+& expected values. This close agreement shows that the 
+ANN can be used in the data analysis, of theoretical work to 
+generate the missing data in the theoretical program. The 
+results of model ANN are com pared with the hydrodynamic 
+simulation data. [ 6] 
+V. ANN FOR HYDRODYNAMIC JOURNAL 
+BEARING  
+The Artificial Neural Network can be used for prediction 
+of pressure distribution in hydrodynamic journal bearing 
+which can be further used for stability analysis of 
+hydrodynamic journal bearing.  [11]. 
+ 
+VI. CONCLUSION  
+As the ANN is an emerging technology it can be used for 
+data analysis in applications such as pattern recognition, 
+prediction, system identification & control. From above 
+theories it can be seen that ANN i s a radial basis function back propagation network. The network is capable of 
+predicting the parameters by experimental system. The 
+network has parallel structure and fast learning capacity. 
+The collected experimental data such as speed, load, & 
+values of pressure distribution  etc. are also employed as 
+training and testing data for an artificial neural network. 
+The neural network is a feed forward three layered network. 
+Quick propagation algorithm is used to update the weight of 
+the network during the train ing. The ANN has a superior 
+performance to follow the desired results of the system and 
+is employed to analyze such systems parameters in practical 
+applications.    
+VII. ACKNOWLEDGEMENT  
+The authors would like to acknowledge & thanks to Dr. 
+Y.R. Kharde , Principal, and Shree . Saibaba Institute of 
+Engineering Research  & Allied Sciences , Rahata, Prof. S.B. 
+Belkar, Asso. Prof., P.R.E.C. Loni & Prof. R.R. Navthar, 
+Asstt. Prof., P.D.V.V.P. COE Ahmednagar for their 
+immense help in this work.  
+ 
+REFERENCES  
+[1] A.O. Kurban , “Analysis of shafts surface pressures   using 
+neural network”,  Industrial Lubrication and Tribology, 
+(2004), Volume 56, No. 4, Page no. 217 -225. 
+[2] Fazil Canbulut, Cem Sinanoglu and Sahin Yildirim, “Neural 
+network analysis of leakage oil quantity in the des ign of 
+partially hydrostatic slipper bearings”,  Industrial Lubrication 
+and Tribology, (2004), Volume 56, No. 4, Page no. 231 -243 
+[3] Dr. R. R. Srikanth. “Application of ANN in Condition 
+Monitoring: A Case Study”, (Conference proceeding 
+“Condition Monitoring of  Mechanical System”) (2009), 
+Gitam University, Vishakhapattanam, Page no. 31 -44. 
+[4] R.R.Navthar & Dr. N.V. Halegowda, “Analysis of oil film 
+thickness in Hydrodynamic Journal Bearing using Artificial 
+Neural Networks”, Ciit International Journal of Artificial 
+Intelligent System & Machine Learning (Nov. 2011), Volume 
+3, No.12, Page no. -762-766 
+[5] M. Ananda Rao & J. Srinivas, “Dynamics of rotors supported 
+on fluid film bearings using neural networks”,  Centre for 
+System Dynamics & Condition Monitoring & Diagnostic 
+Studies, Page no.149 -155 
+[6] Ghorbanian, M. Ahmadi, R. Soltani, “Design predictive tool 
+& optimization of journal bearing using neural network 
+model & multi objective genetic algorithm”, Scientia Iranica 
+B (2011), Volume 18, No.5 Page no. -1095 -1105  
+[7] “Neural netwo rks: A requirement for intelligent systems”  
+[8] Kishan Mehrotra, Chilkuri K. Mohan, Sanjay Ranka, 
+“Elements of Artificial Neural Networks”, Penram 
+International Publishing (India), (1997), Volume 1, Page no. -
+1-41.  
+[9] Carlos Gershenson, ”Artificial Neural Network  for 
+Beginners”  
+[10] R.R.Navthar & Dr. N.V. Halegowda, “Applications of 
+Artificial Neural Network in Pressure Distribution Analysis 
+of Hydrodynamic Journal Bearings”,  ASME Digital Library, 
+e-books , International Conference on Computer Technology  
+ 
+      
+         ISSN: 2277 -3754   
+    ISO 9001:2008 Certified  
+International Journal of Engineering and Innovative Technology (IJEIT)  
+Volume 2, Issue 1, July 2012  
+ 194 
+& Development ( 2011),  (Third ICCTD 2011) , Page no. -
+717-722 
+[11] R.R.Navthar & Dr. N.V. Halegowda, “Pressure  Distribution 
+Analysis of Hydrodynamic Journal Bearings using Artificial 
+Neural Network”,  ASME Digital Library, e-books , 
+International Conference on Computer & Autom ation 
+Engineering, (Fourth ICCAE 2012), Page no. -153-161 
+ 
+AUTHOR BIOGRAPHY  
+ 
+Prof.A.D. Dongare  
+M.E. (Design Engg), Ph.D.(App)  
+P.R.E.C. Loni Rahata Ahmednagar.  
+Area of Research:  Design and Tribology.  
+Professional Membership: IE (I).  
+ 
+ Prof.R.R. Kharde  
+M.E. (Tribology), Head, Dept. of 
+Mechanical Engineering.  
+P.R.E.C. Loni Rahata Ahmednagar.  
+Area of Research:  Design and Tribology.  
+Professional Membership: IE (I).  
+ 
+ 
+A.D. Kachare  
+B.E. (Mechanical), P.G. Student.  
+P.R.E.C. Loni Rahata Ahmednagar.  
+Area of Research:  Design.  
+Professional Membership:  IE (I).
