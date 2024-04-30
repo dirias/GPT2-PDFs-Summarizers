@@ -1,8 +1,9 @@
 # PDF
 PDFs/
 
-# Cache Tokenizers
+# Cache 
 cached*
+custom_q_and_a/*
 
 #Private stuffs
 .*
